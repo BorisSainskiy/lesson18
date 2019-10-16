@@ -1,0 +1,580 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bs-container {
+  background: url(../img/img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 1000px;
+  position: relative;
+
+  .bs-header {
+    display: flex;
+    padding: 50px 165px 0px 165px;
+    justify-content: space-between;
+
+    nav {
+      align-self: center;
+
+      a {
+        @include text($darkColorForTest, Raleway, 16px, 700);
+        line-height: 25px;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &:not(:last-child) {
+          margin-right: 40px;
+        }
+
+        &:hover {
+          border-top: 2px solid $buttonAndEffectFreshLife;
+          padding-top: 5px;
+        }
+      }
+    }
+  }
+
+  section {
+    widows: 370px;
+    height: 240px;
+    padding: 260px 165px 0px 165px;
+
+    h1 {
+      width: 287px;
+      height: 46px;
+      @include text($darkColorForTest, Raleway, 60px, bold);
+      line-height: 25px;
+      margin: 0px;
+    }
+
+    p {
+      width: 368px;
+      height: 70px;
+      @include text($darkColorForTest, Raleway, 17px, 300);
+      line-height: 27px;
+      margin-top: 35px;
+      margin-bottom: 60px;
+      opacity: 0.9;
+    }
+
+    a {
+      width: 200px;
+      height: 55px;
+      box-shadow: $boxShadowFreshLife;
+      background-color: $buttonAndEffectFreshLife;
+      @include text($lightColorForText, Raleway, 20px, 300);
+      line-height: 27px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 20px 25px;
+    }
+  }
+
+  .bs-scroll {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+  }
+}
+
+.bs-about {
+  width: 100%;
+  height: 700px;
+  background-color: $bgColorAboutUs;
+  display: flex;
+
+  .bs-block1 {
+    display: flex;
+    flex-direction: row;
+    width: 1230px;
+    justify-content: space-between;
+    margin-left: 100px;
+
+    img {
+      object-fit: contain;
+    }
+
+    div {
+      align-self: center;
+
+      @media screen and (max-width: 1150px) {
+        margin-left: 70px;
+      }
+    }
+
+    h2 {
+      width: 394px;
+      height: 67px;
+      @include text($lightColorForText, Raleway, 90px, 700);
+      line-height: 27px;
+      margin: 0px;
+
+      @media screen and (max-width: 1150px) {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        margin-left: 50px;
+      }
+    }
+
+    p {
+      width: 499px;
+      @include text($lightColorForText, Raleway, 17px, 300);
+      line-height: 27px;
+      margin: 0px;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    @media screen and (max-width: 1300px) {
+      margin: 0px;
+    }
+
+    @media screen and (max-width: 1150px) {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+
+  @media screen and (max-width: 1150px) {
+    height: 1050px;
+  }
+}
+
+.bs-services {
+  width: 100%;
+  height: 790px;
+  background-color: #70bfff;
+  display: flex;
+
+  .bs-block2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 1230px;
+    position: relative;
+    margin-left: 100px;
+
+    > span {
+      position: absolute;
+      width: 539px;
+      height: 67px;
+      @include text($lightColorForText, Raleway, 90px, 700);
+      line-height: 27px;
+      top: 47%;
+      left: 50%;
+    }
+
+    > img {
+      object-fit: contain;
+    }
+
+    ul {
+      list-style: none;
+      align-self: center;
+      margin-top: 100px;
+
+      li {
+        display: flex;
+        justify-content: space-around;
+        width: 400px;
+        height: 100px;
+        background-color: $lightColorForText;
+        @include text($darkColorForTest, Raleway, 20px, 700);
+        line-height: 27px;
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+
+        #bigLi {
+          padding: 0px;
+          width: 238px;
+          text-align: center;
+          padding-left: 10px;
+          padding-right: 20px;
+        }
+
+        img {
+          object-fit: contain;
+          padding: 28px 26px 28px 26px;
+          border-left: 1px solid #a2a2a2;
+        }
+
+        #smallImg {
+          padding-left: 30px;
+          padding-right: 34px;
+        }
+
+        span {
+          align-self: center;
+          padding: 37px 70px 37px 60px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1300px) {
+      margin: 0px;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 1150px) {
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+
+      ul {
+        margin-top: 50px;
+      }
+
+      span {
+        top: 27%;
+        left: 26%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1150px) {
+    height: 1100px;
+  }
+}
+
+.bs-gallery {
+  width: 100%;
+  height: 1540px;
+  background-color: #ffe92f;
+
+  .bs-gallery-block {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+      display: block;
+      width: 307px;
+      height: 87px;
+      @include text($darkColorForTest, Raleway, 90px, 700);
+      line-height: 27px;
+      margin: 0 auto;
+    }
+
+    p {
+      text-align: center;
+      width: 600px;
+      height: 70px;
+      @include text($darkColorForTest, Raleway, 17px, 300);
+      line-height: 27px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    img {
+      object-fit: contain;
+    }
+
+    a {
+      width: 200px;
+      height: 45px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      background-color: #5585a2;
+      text-decoration: none;
+      text-align: center;
+      @include text($lightColorForText, Raleway, 20px, 300);
+      line-height: 27px;
+      text-transform: uppercase;
+      margin-top: 50px;
+      padding-top: 15px;
+    }
+
+    .big-blog {
+      margin-top: 50px;
+      width: 1170px;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-gap: 30px;
+
+      img {
+        &:nth-child(1) {
+          grid-column: 1/3;
+          grid-row: 1/3;
+        }
+      }
+    }
+
+    .sm-blog {
+      margin-top: 30px;
+      width: 1170px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 30px;
+    }
+
+    @media screen and (max-width: 1170px) {
+      .big-blog {
+      }
+    }
+  }
+}
+
+.bs-subscribe {
+  width: 100%;
+  height: 500px;
+  background-image: url(../img/bg-subscribe.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .bs-block3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 200px;
+    padding-top: 145px;
+    padding-left: 165px;
+
+    span {
+      width: 305px;
+      height: 29px;
+      @include text($darkColorForTest, Raleway, 40px, 700);
+      line-height: 27px;
+    }
+
+    p {
+      width: 600px;
+      height: 43px;
+      @include text($darkColorForTest, Raleway, 17px, 300);
+      line-height: 27px;
+    }
+
+    input {
+      width: 555px;
+      height: 55px;
+      border: 1px solid #262626;
+      margin-top: 15px;
+      padding-left: 15px;
+    }
+
+    button {
+      width: 170px;
+      height: 55px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      background-color: #96b92c;
+      border: none;
+      @include text($lightColorForText, Raleway, 20px, 300);
+      line-height: 27px;
+      text-transform: uppercase;
+      margin-left: 30px;
+    }
+  }
+}
+
+.bs-blog {
+  width: 100%;
+  height: 870px;
+  background-color: #b07cf7;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 700px;
+    align-items: center;
+    padding-top: 100px;
+
+    > p {
+      > span {
+        display: block;
+        width: 190px;
+        height: 86px;
+        @include text($lightColorForText, Raleway, 90px, 700);
+        line-height: 25px;
+        margin-left: 190px;
+      }
+      width: 600px;
+      height: 66px;
+      @include text($lightColorForText, Raleway, 17px, 300);
+      line-height: 25px;
+      margin-bottom: 80px;
+      text-align: center;
+    }
+
+    a {
+      width: 150px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      background-color: #f72b3b;
+      text-decoration: none;
+      @include text($lightColorForText, Raleway, 20px, 300);
+      text-transform: uppercase;
+      padding: 20px 10px 20px 40px;
+    }
+
+    .bs-block5 {
+      display: flex;
+
+      div {
+        width: 370px;
+        height: 310px;
+
+        > p {
+          width: 307px;
+          @include text($lightColorForText, Raleway, 20px, 700);
+          line-height: 25px;
+          margin: 130px 45px 0px 20px;
+        }
+
+        > span {
+          display: block;
+          @include text($lightColorForText, Raleway, 13px, 300);
+          opacity: 0.6;
+          margin-top: 10px;
+          margin-left: 20px;
+        }
+
+        .data {
+          width: 60px;
+          height: 60px;
+          background-image: url(../img/bg-blog.png);
+          @include text($lightColorForText, Raleway, 32px, 700);
+          line-height: 25px;
+          margin: 30px 0px 0px 30px;
+          text-align: center;
+
+          > span {
+            width: 44px;
+            height: 15px;
+            @include text($lightColorForText, Raleway, 21px, 400);
+            line-height: 25px;
+            text-transform: uppercase;
+          }
+        }
+
+        &:nth-of-type(1) {
+          background-image: url(../img/bg-blog1.png);
+          margin-right: 30px;
+        }
+
+        &:nth-of-type(2) {
+          background-image: url(../img/bg-blog2.png);
+          margin-right: 30px;
+        }
+
+        &:nth-of-type(3) {
+          background-image: url(../img/bg-block3.png);
+        }
+      }
+    }
+  }
+}
+
+.bs-contact {
+  width: 100%;
+  height: 870px;
+  background-image: url(../img/bg-contact.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > span {
+    padding-top: 100px;
+    width: 337px;
+    height: 65px;
+    @include text($darkColorForTest, Raleway, 90px, 700);
+    line-height: 25px;
+  }
+
+  > p {
+    width: 360px;
+    height: 41px;
+    @include text($darkColorForTest, Raleway, 17px, 300);
+    line-height: 25px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .bs-block6 {
+    display: flex;
+    margin-right: 200px;
+    form {
+      display: flex;
+      flex-direction: column;
+      margin-right: 170px;
+
+      input {
+        width: 500px;
+        height: 50px;
+        background-color: #00c4c4;
+        padding-left: 15px;
+        border: none;
+        margin-bottom: 15px;
+        opacity: 0.5;
+
+        &::-webkit-input-placeholder {
+          @include text($lightColorForText, Raleway, 15px, 300);
+          line-height: 25px;
+        }
+      }
+
+      textarea {
+        width: 500px;
+        height: 250px;
+        background-color: #00c4c4;
+        opacity: 0.5;
+        padding-left: 15px;
+
+        &::-webkit-input-placeholder {
+          @include text($lightColorForText, Raleway, 15px, 300);
+          line-height: 25px;
+        }
+      }
+    }
+
+    > div {
+      > span {
+        width: 317px;
+        height: 160px;
+        @include text($darkColorForTest, Raleway, 20px, 900);
+        line-height: 25px;
+      }
+
+      > p {
+        @include text($darkColorForTest, Raleway, 20px, 300);
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  height: 90px;
+  background-color: $darkColorForTest;
+  display: flex;
+  justify-content: space-around;
+
+  img {
+    object-fit: contain;
+  }
+
+  p {
+    width: 270px;
+    height: 16px;
+    @include text($lightColorForText, Raleway, 16px, 300);
+    line-height: 25px;
+    margin: 0px;
+    margin-top: 30px;
+    opacity: 0.7;
+  }
+
+  span {
+    color: #ff2b58;
+    opacity: 1 !important;
+  }
+}
