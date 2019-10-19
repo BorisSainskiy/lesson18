@@ -1,11 +1,6 @@
 @import "./variables.scss";
 @import "./mixin.scss";
 
-.container {
-  width: 100%;
-  margin: 0 auto;
-}
-
 .bs-container {
   background: url(../img/img.png);
   background-repeat: no-repeat;
@@ -18,6 +13,10 @@
     display: flex;
     padding: 50px 165px 0px 165px;
     justify-content: space-between;
+
+    input {
+      display: none;
+    }
 
     nav {
       align-self: center;
@@ -35,6 +34,47 @@
         &:hover {
           border-top: 2px solid $buttonAndEffectFreshLife;
           padding-top: 5px;
+        }
+      }
+
+      .bs-main-menu {
+        @media screen and (max-width: 1100px) {
+          display: none;
+          a {
+            display: block;
+            padding: 8px;
+          }
+        }
+      }
+
+      @media screen and (max-width: 1100px) {
+        .bs-button {
+          margin-top: 25px;
+          text-align: center;
+          display: block;
+          cursor: pointer;
+          @include text($darkColorForTest, Raleway, 16px, 700);
+
+          &::after {
+            content: attr(data-open);
+            display: block;
+          }
+        }
+      }
+    }
+
+    #bs-menu-checkbox:checked {
+      @media screen and (max-width: 1100px) {
+        + nav[role="navigation"] .bs-main-menu {
+          display: block;
+          margin-right: 70px;
+          margin-top: 50px;
+        }
+
+        + nav[role="navigation"] .bs-button {
+          &::after {
+            content: attr(data-close);
+          }
         }
       }
     }
@@ -74,6 +114,10 @@
       text-decoration: none;
       padding: 20px 25px;
     }
+
+    @media screen and (max-width: 1100px) {
+      padding-top: 100px;
+    }
   }
 
   .bs-scroll {
@@ -103,7 +147,7 @@
     div {
       align-self: center;
 
-      @media screen and (max-width: 1150px) {
+      @media screen and (max-width: 1170px) {
         margin-left: 70px;
       }
     }
@@ -115,10 +159,14 @@
       line-height: 27px;
       margin: 0px;
 
-      @media screen and (max-width: 1150px) {
+      @media screen and (max-width: 1170px) {
         margin-top: 50px;
         margin-bottom: 20px;
-        margin-left: 50px;
+        margin-left: 30px;
+      }
+
+      @media screen and (max-width: 850px) {
+        @include text($lightColorForText, Raleway, 70px, 700);
       }
     }
 
@@ -131,27 +179,42 @@
       &:not(:last-child) {
         margin-bottom: 20px;
       }
+
+      @media screen and (max-width: 850px) {
+        @include text($lightColorForText, Raleway, 14px, 300);
+      }
     }
 
     @media screen and (max-width: 1300px) {
       margin: 0px;
     }
 
-    @media screen and (max-width: 1150px) {
+    @media screen and (max-width: 1170px) {
       flex-direction: column;
       justify-content: flex-start;
     }
+
+    @media screen and (max-width: 850px) {
+      img {
+        width: 450px;
+        margin-left: 135px;
+      }
+    }
   }
 
-  @media screen and (max-width: 1150px) {
+  @media screen and (max-width: 1170px) {
     height: 1050px;
+  }
+
+  @media screen and (max-width: 850px) {
+    height: 850px;
   }
 }
 
 .bs-services {
   width: 100%;
   height: 790px;
-  background-color: #70bfff;
+  background-color: $bgColorServices;
   display: flex;
 
   .bs-block2 {
@@ -194,7 +257,7 @@
           margin-bottom: 20px;
         }
 
-        #bigLi {
+        #bs-bigLi {
           padding: 0px;
           width: 238px;
           text-align: center;
@@ -205,10 +268,10 @@
         img {
           object-fit: contain;
           padding: 28px 26px 28px 26px;
-          border-left: 1px solid #a2a2a2;
+          border-left: 1px solid $borderColorServices;
         }
 
-        #smallImg {
+        #bs-smallImg {
           padding-left: 30px;
           padding-right: 34px;
         }
@@ -225,7 +288,7 @@
       width: 100%;
     }
 
-    @media screen and (max-width: 1150px) {
+    @media screen and (max-width: 1170px) {
       flex-direction: column-reverse;
       justify-content: flex-start;
 
@@ -238,9 +301,29 @@
         left: 26%;
       }
     }
+
+    @media screen and (max-width: 850px) {
+      .bs-tomato {
+        width: 430px;
+        margin-left: 190px;
+      }
+
+      > span {
+        top: 25%;
+        left: 23%;
+        @include text($lightColorForText, Raleway, 70px, 700);
+      }
+
+      ul {
+        padding-bottom: 40px;
+        li {
+          @include text($darkColorForTest, Raleway, 17px, 700);
+        }
+      }
+    }
   }
 
-  @media screen and (max-width: 1150px) {
+  @media screen and (max-width: 1170px) {
     height: 1100px;
   }
 }
@@ -248,7 +331,7 @@
 .bs-gallery {
   width: 100%;
   height: 1540px;
-  background-color: #ffe92f;
+  background-color: $bgColorGallery;
 
   .bs-gallery-block {
     padding-top: 100px;
@@ -263,6 +346,10 @@
       @include text($darkColorForTest, Raleway, 90px, 700);
       line-height: 27px;
       margin: 0 auto;
+
+      @media screen and (max-width: 850px) {
+        @include text($darkColorForTest, Raleway, 80px, 700);
+      }
     }
 
     p {
@@ -282,8 +369,8 @@
     a {
       width: 200px;
       height: 45px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-      background-color: #5585a2;
+      box-shadow: 0 2px 5px $shadowLinkGallery;
+      background-color: $bgLinkGallery;
       text-decoration: none;
       text-align: center;
       @include text($lightColorForText, Raleway, 20px, 300);
@@ -293,7 +380,7 @@
       padding-top: 15px;
     }
 
-    .big-blog {
+    .bs-big-block {
       margin-top: 50px;
       width: 1170px;
       display: grid;
@@ -306,20 +393,73 @@
           grid-row: 1/3;
         }
       }
+
+      @media screen and (max-width: 850px) {
+        img {
+          &:nth-child(1) {
+            width: 585px;
+          }
+
+          width: 280px;
+        }
+        margin-left: 100px;
+      }
     }
 
-    .sm-blog {
+    .bs-sm-block {
       margin-top: 30px;
       width: 1170px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 30px;
+
+      @media screen and (max-width: 850px) {
+        img {
+          width: 400px;
+          margin-left: 50px;
+        }
+      }
     }
 
     @media screen and (max-width: 1170px) {
-      .big-blog {
+      .bs-big-block {
+        width: 700px;
+        img {
+          &:nth-child(1) {
+            grid-column: 1/4;
+          }
+        }
+      }
+
+      .bs-sm-block {
+        margin-left: 200px;
+        width: 700px;
+
+        img {
+          &:nth-child(1) {
+            grid-column: 1/3;
+          }
+        }
+      }
+
+      a {
+        margin-left: 50px;
       }
     }
+
+    @media screen and (max-width: 850px) {
+      a {
+        margin-left: 0px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1170px) {
+    height: 2200px;
+  }
+
+  @media screen and (max-width: 850px) {
+    height: 1800px;
   }
 }
 
@@ -355,7 +495,7 @@
     input {
       width: 555px;
       height: 55px;
-      border: 1px solid #262626;
+      border: 1px solid $borderInputSubcribe;
       margin-top: 15px;
       padding-left: 15px;
     }
@@ -363,13 +503,28 @@
     button {
       width: 170px;
       height: 55px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-      background-color: #96b92c;
+      box-shadow: 0 2px 5px $shadowLinkSubscribe;
+      background-color: $bgcolorbutton;
       border: none;
       @include text($lightColorForText, Raleway, 20px, 300);
       line-height: 27px;
       text-transform: uppercase;
       margin-left: 30px;
+    }
+
+    @media screen and (max-width: 940px) {
+      span {
+        margin-left: 120px;
+      }
+
+      button {
+        margin-top: 30px;
+        margin-left: 190px;
+      }
+    }
+
+    @media screen and (max-width: 850px) {
+      padding-left: 100px;
     }
   }
 }
@@ -377,7 +532,7 @@
 .bs-blog {
   width: 100%;
   height: 870px;
-  background-color: #b07cf7;
+  background-color: $bgColorBlog;
 
   > div {
     display: flex;
@@ -395,6 +550,10 @@
         @include text($lightColorForText, Raleway, 90px, 700);
         line-height: 25px;
         margin-left: 190px;
+
+        @media screen and (max-width: 850px) {
+          @include text($lightColorForText, Raleway, 70px, 700);
+        }
       }
       width: 600px;
       height: 66px;
@@ -402,6 +561,10 @@
       line-height: 25px;
       margin-bottom: 80px;
       text-align: center;
+
+      @media screen and (max-width: 850px) {
+        @include text($lightColorForText, Raleway, 15px, 300);
+      }
     }
 
     a {
@@ -436,7 +599,7 @@
           margin-left: 20px;
         }
 
-        .data {
+        .bs-data {
           width: 60px;
           height: 60px;
           background-image: url(../img/bg-blog.png);
@@ -468,7 +631,28 @@
           background-image: url(../img/bg-block3.png);
         }
       }
+
+      @media screen and (max-width: 1170px) {
+        flex-direction: column;
+        margin-top: 50px;
+
+        div {
+          margin-bottom: 30px;
+
+          &:last-child {
+            margin-bottom: 60px;
+          }
+        }
+      }
     }
+
+    @media screen and (max-width: 1170px) {
+      padding-top: 400px;
+    }
+  }
+
+  @media screen and (max-width: 1170px) {
+    height: 1500px;
   }
 }
 
@@ -488,6 +672,15 @@
     height: 65px;
     @include text($darkColorForTest, Raleway, 90px, 700);
     line-height: 25px;
+
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 35px;
+    }
+
+    @media screen and (max-width: 850px) {
+      @include text($darkColorForTest, Raleway, 70px, 700);
+      margin-bottom: 15px;
+    }
   }
 
   > p {
@@ -497,15 +690,23 @@
     line-height: 25px;
     text-align: center;
     margin-bottom: 50px;
+
+    @media screen and (max-width: 850px) {
+      @include text($darkColorForTest, Raleway, 15px, 300);
+      margin-bottom: 40px;
+    }
   }
 
   .bs-block6 {
     display: flex;
     margin-right: 200px;
+    width: 990px;
+    justify-content: space-between;
+
     form {
       display: flex;
       flex-direction: column;
-      margin-right: 170px;
+      // margin-right: 170px;
 
       input {
         width: 500px;
@@ -534,6 +735,11 @@
           line-height: 25px;
         }
       }
+
+      @media screen and (max-width: 1170px) {
+        order: 2;
+        align-self: center;
+      }
     }
 
     > div {
@@ -542,13 +748,36 @@
         height: 160px;
         @include text($darkColorForTest, Raleway, 20px, 900);
         line-height: 25px;
+
+        @media screen and (max-width: 850px) {
+          @include text($darkColorForTest, Raleway, 15px, 300);
+        }
       }
 
       > p {
         @include text($darkColorForTest, Raleway, 20px, 300);
         margin-top: 5px;
       }
+
+      @media screen and (max-width: 1170px) {
+        order: 1;
+        align-self: center;
+      }
     }
+
+    @media screen and (max-width: 1200px) {
+      width: 880px;
+    }
+
+    @media screen and (max-width: 1170px) {
+      flex-direction: column;
+      margin-left: 200px;
+      height: 710px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    height: 1100px;
   }
 }
 
