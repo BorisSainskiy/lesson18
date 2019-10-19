@@ -384,11 +384,18 @@
 
     @media screen and (max-width: 590px) {
       justify-content: space-between;
+
       .bs-tomato {
         width: 330px;
         margin-left: 20px;
         margin-top: 70px;
       }
+
+      // span {
+      //   width: 539px;
+      //   height: 67px;
+      //   @include text($lightColorForText, Raleway, 90px, 700);
+      // }
     }
   }
 
