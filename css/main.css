@@ -78,6 +78,13 @@
   }
 }
 
+@media screen and (max-width: 590px) {
+  .bs-container .bs-header nav .bs-button {
+    margin-top: 20px;
+    margin-left: 60px;
+  }
+}
+
 @media screen and (max-width: 1100px) {
   .bs-container .bs-header #bs-menu-checkbox:checked + nav[role="navigation"] .bs-main-menu {
     display: block;
@@ -292,15 +299,25 @@
 
 @media screen and (max-width: 590px) {
   .bs-about .bs-block1 img {
-    margin-left: 10px;
+    width: 350px;
+    margin-left: 0px;
+  }
+  .bs-about .bs-block1 h2 {
+    width: 350px;
+    font-weight: 700;
+    font-size: 55px;
+    font-family: Raleway;
+    color: #ffffff;
+    margin-left: 0px;
   }
   .bs-about .bs-block1 p {
-    width: 400px;
+    width: 250px;
     font-weight: 300;
     font-size: 15px;
     font-family: Raleway;
     color: #ffffff;
     line-height: 27px;
+    margin-left: 0px;
   }
 }
 
@@ -313,6 +330,12 @@
 @media screen and (max-width: 850px) {
   .bs-about {
     height: 850px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .bs-about {
+    height: 900px;
   }
 }
 

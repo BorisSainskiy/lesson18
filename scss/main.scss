@@ -67,6 +67,13 @@
           }
         }
       }
+
+      @media screen and (max-width: 590px) {
+        .bs-button {
+          margin-top: 20px;
+          margin-left: 60px;
+        }
+      }
     }
 
     #bs-menu-checkbox:checked {
@@ -231,13 +238,21 @@
 
     @media screen and (max-width: 590px) {
       img {
-        margin-left: 10px;
+        width: 350px;
+        margin-left: 0px;
+      }
+
+      h2 {
+        width: 350px;
+        @include text($lightColorForText, Raleway, 55px, 700);
+        margin-left: 0px;
       }
 
       p {
-        width: 400px;
+        width: 250px;
         @include text($lightColorForText, Raleway, 15px, 300);
         line-height: 27px;
+        margin-left: 0px;
       }
     }
   }
@@ -248,6 +263,10 @@
 
   @media screen and (max-width: 850px) {
     height: 850px;
+  }
+
+  @media screen and (max-width: 590px) {
+    height: 900px;
   }
 }
 
