@@ -51,8 +51,8 @@
   .bs-container .bs-header nav .bs-main-menu {
     display: none;
     position: relative;
-    top: 10%;
-    left: 55px;
+    top: 30%;
+    right: 80px;
   }
   .bs-container .bs-header nav .bs-main-menu a {
     display: block;
