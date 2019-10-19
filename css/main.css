@@ -51,8 +51,8 @@
   .bs-container .bs-header nav .bs-main-menu {
     display: none;
     position: relative;
-    top: 30%;
-    right: 80px;
+    top: 10%;
+    left: 55px;
   }
   .bs-container .bs-header nav .bs-main-menu a {
     display: block;
@@ -301,6 +301,7 @@
   .bs-about .bs-block1 img {
     width: 350px;
     margin-left: 0px;
+    margin-top: 30px;
   }
   .bs-about .bs-block1 h2 {
     width: 350px;
@@ -483,6 +484,19 @@
     font-size: 17px;
     font-family: Raleway;
     color: #262626;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .bs-services .bs-block2 {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .bs-services .bs-block2 .bs-tomato {
+    width: 330px;
+    margin-left: 20px;
+    margin-top: 70px;
   }
 }
 

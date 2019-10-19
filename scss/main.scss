@@ -48,8 +48,8 @@
           }
 
           position: relative;
-          top: 30%;
-          right: 80px;
+          top: 10%;
+          left: 55px;
         }
       }
 
@@ -240,6 +240,7 @@
       img {
         width: 350px;
         margin-left: 0px;
+        margin-top: 30px;
       }
 
       h2 {
@@ -378,6 +379,15 @@
         li {
           @include text($darkColorForTest, Raleway, 17px, 700);
         }
+      }
+    }
+
+    @media screen and (max-width: 590px) {
+      justify-content: space-between;
+      .bs-tomato {
+        width: 330px;
+        margin-left: 20px;
+        margin-top: 70px;
       }
     }
   }
