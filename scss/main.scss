@@ -497,7 +497,7 @@
         display: block;
 
         img {
-          width: 585px;
+          width: 500px;
           margin-bottom: 10px;
         }
 
@@ -524,7 +524,7 @@
       @media screen and (max-width: 850px) {
         display: block;
         img {
-          width: 585px;
+          width: 500px;
           &:not(:last-child) {
             margin-bottom: 10px;
           }
@@ -584,8 +584,17 @@
       }
 
       .bs-sm-block {
-        margin-left: 100px;
+        text-align: center;
+        margin-left: 0px;
         margin-top: 10px;
+        width: 80%;
+      }
+
+      .bs-big-block {
+        text-align: center;
+        margin-left: 0px;
+
+        width: 80%;
       }
     }
     @media screen and (max-width: 590px) {
@@ -653,14 +662,14 @@
     }
 
     p {
-      width: 600px;
+      width: 80%;
       height: 43px;
       @include text($darkColorForTest, Raleway, 17px, 300);
       line-height: 27px;
     }
 
     input {
-      width: 555px;
+      width: 80%;
       height: 55px;
       border: 1px solid $borderInputSubcribe;
       margin-top: 15px;
@@ -681,12 +690,16 @@
 
     @media screen and (max-width: 940px) {
       span {
-        margin-left: 120px;
+        text-align: center;
       }
 
       button {
         margin-top: 30px;
         margin-left: 190px;
+      }
+
+      p {
+        width: 80%;
       }
     }
 
@@ -707,7 +720,7 @@
       }
 
       input {
-        width: 300px;
+        // width: 300px;
         margin-top: 70px;
       }
 

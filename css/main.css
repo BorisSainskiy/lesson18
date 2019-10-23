@@ -644,7 +644,7 @@
     margin-left: 100px;
   }
   .bs-gallery .bs-gallery-block .bs-big-block img {
-    width: 585px;
+    width: 500px;
     margin-bottom: 10px;
   }
 }
@@ -680,7 +680,7 @@
     display: block;
   }
   .bs-gallery .bs-gallery-block .bs-sm-block img {
-    width: 585px;
+    width: 500px;
   }
   .bs-gallery .bs-gallery-block .bs-sm-block img:not(:last-child) {
     margin-bottom: 10px;
@@ -742,8 +742,15 @@
     margin-left: 0px;
   }
   .bs-gallery .bs-gallery-block .bs-sm-block {
-    margin-left: 100px;
+    text-align: center;
+    margin-left: 0px;
     margin-top: 10px;
+    width: 80%;
+  }
+  .bs-gallery .bs-gallery-block .bs-big-block {
+    text-align: center;
+    margin-left: 0px;
+    width: 80%;
   }
 }
 
@@ -832,7 +839,7 @@
 }
 
 .bs-subscribe .bs-block3 p {
-  width: 600px;
+  width: 80%;
   height: 43px;
   font-weight: 300;
   font-size: 17px;
@@ -842,7 +849,7 @@
 }
 
 .bs-subscribe .bs-block3 input {
-  width: 555px;
+  width: 80%;
   height: 55px;
   border: 1px solid #262626;
   margin-top: 15px;
@@ -867,11 +874,14 @@
 
 @media screen and (max-width: 940px) {
   .bs-subscribe .bs-block3 span {
-    margin-left: 120px;
+    text-align: center;
   }
   .bs-subscribe .bs-block3 button {
     margin-top: 30px;
     margin-left: 190px;
+  }
+  .bs-subscribe .bs-block3 p {
+    width: 80%;
   }
 }
 
@@ -893,7 +903,6 @@
     width: 300px;
   }
   .bs-subscribe .bs-block3 input {
-    width: 300px;
     margin-top: 70px;
   }
   .bs-subscribe .bs-block3 button {
