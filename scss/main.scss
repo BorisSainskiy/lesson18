@@ -669,11 +669,12 @@
     }
 
     input {
-      width: 80%;
+      width: 550px;
       height: 55px;
       border: 1px solid $borderInputSubcribe;
       margin-top: 15px;
       padding-left: 15px;
+      margin-bottom: 20px;
     }
 
     button {
@@ -699,6 +700,10 @@
       }
 
       p {
+        width: 80%;
+      }
+
+      input {
         width: 80%;
       }
     }

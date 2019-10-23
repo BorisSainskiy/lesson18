@@ -849,11 +849,12 @@
 }
 
 .bs-subscribe .bs-block3 input {
-  width: 80%;
+  width: 550px;
   height: 55px;
   border: 1px solid #262626;
   margin-top: 15px;
   padding-left: 15px;
+  margin-bottom: 20px;
 }
 
 .bs-subscribe .bs-block3 button {
@@ -881,6 +882,9 @@
     margin-left: 190px;
   }
   .bs-subscribe .bs-block3 p {
+    width: 80%;
+  }
+  .bs-subscribe .bs-block3 input {
     width: 80%;
   }
 }
